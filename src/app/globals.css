@@ -19,3 +19,20 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: "bg-spotify-bottom";
+  border-radius: 10px; /* Adds rounded corners to the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #301b1f;
+  border-radius: 5px;
+}
