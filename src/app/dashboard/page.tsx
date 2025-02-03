@@ -54,7 +54,7 @@ export default function Dashboard() {
         <Card
             title="📅 Planned Date"
             content={<PlannedDate />}
-            variant="elegant" // Use romantic styling
+            variant="darker" // Use romantic styling
           />
         </div>
 
@@ -62,7 +62,7 @@ export default function Dashboard() {
           <Card
             title="📸 Memory Timeline"
             content={< ></>}
-            variant="elegant" // Use romantic styling
+            variant="darker" // Use romantic styling
           />
         </div>
 
@@ -74,7 +74,7 @@ export default function Dashboard() {
           <Card
             title="💡 Date Ideas"
             content={<></>}
-            variant="elegant" // Use romantic styling
+            variant="darker" // Use romantic styling
           />
         </div>
       </GridLayout>

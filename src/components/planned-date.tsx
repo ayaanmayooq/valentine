@@ -19,16 +19,16 @@ export function PlannedDate() {
   }, []);
 
   return (
-    <div className="h-full w-full  p-4 overflow-auto">
+    <div className="h-full w-full p-4 overflow-auto">
       {plannedDate ? (
         <div className="text-center">
           {/* Title */}
-          <h2 className="text-2xl font-bold text-valentine-red mb-4">
+          <h2 className="text-2xl font-bold text-valentine-rose mb-4">
             {plannedDate.title}
           </h2>
 
           {/* Answers */}
-          <ul className="text-left list-inside list-disc text-gray-800 mb-4">
+          <ul className="text-left list-inside list-disc mb-4">
             {plannedDate.answers.map((answer, index) => (
               <li key={index} className="mb-1">
                 {answer}
@@ -37,7 +37,7 @@ export function PlannedDate() {
           </ul>
 
           {/* Date */}
-          <p className="text-sm text-gray-600">
+          <p className="text-sm">
             Excited for{" "}
             <span className="font-medium">
               {plannedDate.date}

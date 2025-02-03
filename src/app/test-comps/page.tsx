@@ -33,6 +33,11 @@ const TestComponent: React.FC = () => {
   variant="whimsical"
 />
 
+<Card
+  title="Surprise Date Ideas"
+  content={<p>1. Stargazing<br />2. Movie Marathon<br />3. Cooking Together</p>}
+  variant="darker"
+/>
 
         </div>
     );

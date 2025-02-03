@@ -46,7 +46,8 @@ export function Survey({ title, date, questions }: SurveyProps) {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-valentine-pink text-black p-6">
       <header className="text-2xl font-bold mb-8">
-        {surveyComplete ? "Survey Summary" : `Question ${currentQuestion + 1} of ${questions.length}`}
+        {/* {surveyComplete ? "Survey Summary" : `Question ${currentQuestion + 1} of ${questions.length}`} */}
+        {surveyComplete ? "She cooked" : `Let her cook!`}
       </header>
       <div className="w-full max-w-3xl bg-white rounded-xl shadow-lg p-6">
         {!surveyComplete ? (
