@@ -5,6 +5,7 @@ import GridLayout from "react-grid-layout";
 import { Placeholder } from "@/components/placeholder";
 
 import {PlannedDate} from "@/components/planned-date";
+import {DateIdeasChatbot} from "@/components/chatbot";
 import {SpotifyPlaylist} from "@/components/spotify-playlist";
 
 import { Card } from "@/components/card";
@@ -73,7 +74,7 @@ export default function Dashboard() {
         <div key="date-ideas" className="">
           <Card
             title="💡 Date Ideas"
-            content={<></>}
+            content={<DateIdeasChatbot />}
             variant="darker" // Use romantic styling
           />
         </div>
