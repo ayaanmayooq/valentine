@@ -1,101 +1,119 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
+
+export default function Home(): JSX.Element {
+  const [showQuestion, setShowQuestion] = useState<boolean>(false);
+  const [escaped, setEscaped] = useState<boolean>(false);
+  const [noButtonPos, setNoButtonPos] = useState<{ top: number; left: number }>({ top: 0, left: 0 });
+  const [noButtonText, setNoButtonText] = useState<string>("No");
+  const router = useRouter();
+
+  // Show the yes/no question after the invite animation (1 second for testing)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowQuestion(true);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Navigation handlers
+  const handleYes = () => {
+    router.push("/yes");
+  };
+
+  const handleNo = () => {
+    router.push("/no");
+  };
+
+  // Handle hover: reposition the No button and update its text
+  const handleNoHover = () => {
+    if (typeof window !== "undefined") {
+      // On the first hover, mark the button as escaped so that we show the fixed one
+      if (!escaped) {
+        setEscaped(true);
+      }
+      // Use approximate dimensions for the button (adjust if needed)
+      const approxButtonWidth = 120;
+      const approxButtonHeight = 40;
+      // Calculate new random positions ensuring the button stays fully in view
+      const newTop = Math.random() * (window.innerHeight - 50);
+      const newLeft = Math.random() * (window.innerWidth - 100);
+      setNoButtonPos({ top: newTop, left: newLeft });
+
+      // List of playful messages for the No button
+      const noTexts = [
+        "cmonnnn...",
+        "really? NO?!",
+        "I thought we were closer :(",
+        "Oh come on, don't be like that!",
+        "Seriously? Is that your final answer?",
+        "I thought you felt it too!",
+        "Don't you want to be mine?",
+        "This is a deal-breaker!",
+        "Are you kidding me?!",
+        "I'm pouring my heart out here!",
+        "You're breaking my heart!"
+      ];
+      const randomText = noTexts[Math.floor(Math.random() * noTexts.length)];
+      setNoButtonText(randomText);
+    }
+  };
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-valentine-pink relative">
+      {/* Animated Invitation */}
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="text-4xl font-bold text-valentine-red"
+      >
+        Will You Be My Valentine?
+      </motion.div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      {/* Buttons container with reserved space to prevent layout shifts */}
+      <div className="mt-8 h-8 flex items-center justify-center space-x-4 relative">
+        {showQuestion && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="flex items-center space-x-4"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+            <button
+              onClick={handleYes}
+              className="px-6 py-2 bg-valentine-red text-white rounded hover:bg-red-600 transition"
+            >
+              Yes
+            </button>
+            {/* Render the inline No button only if it hasn’t escaped */}
+            {!escaped && (
+              <button
+                onMouseEnter={handleNoHover}
+                onClick={handleNo}
+                className="px-6 py-2 bg-gray-300 text-black rounded hover:bg-gray-400 transition"
+              >
+                {noButtonText}
+              </button>
+            )}
+          </motion.div>
+        )}
+      </div>
+
+      {/* Render the fixed-position No button only once it has escaped */}
+      {escaped && showQuestion && (
+        <motion.button
+          onMouseEnter={handleNoHover}
+          onClick={handleNo}
+          style={{ position: "fixed", top: noButtonPos.top, left: noButtonPos.left }}
+          className="px-6 py-2 bg-gray-300 text-black rounded hover:bg-gray-400 transition"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          {noButtonText}
+        </motion.button>
+      )}
     </div>
   );
 }

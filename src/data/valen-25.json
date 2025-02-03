@@ -1,0 +1,42 @@
+{
+  "title": "Valentine's Date",
+  "date": "2025-02-14",
+  "questions": [
+    {
+      "title": "Question 1",
+      "text": "What is your favorite activity for a date?",
+      "options": [
+        "Dinner at a romantic restaurant",
+        "A walk in the park",
+        "Watching a movie together",
+        "Cooking at home"
+      ]
+    },
+    {
+      "title": "Question 2",
+      "text": "What kind of food do you prefer?",
+      "options": ["Italian", "Indian", "Mexican", "Chinese"]
+    },
+    {
+      "title": "Question 3",
+      "text": "Which is your preferred type of music?",
+      "options": ["Pop", "Rock", "Jazz", "Classical"]
+    },
+    {
+      "title": "Question 4",
+      "text": "What kind of movies do you enjoy?",
+      "options": ["Comedy", "Action", "Drama", "Horror"]
+    },
+    {
+      "title": "Question 5",
+      "text": "Which type of vacation do you prefer?",
+      "options": ["Beach", "Mountains", "City", "Countryside"]
+    },
+    {
+      "title": "Question 6",
+      "text": "What is your favorite drink?",
+      "options": ["Coffee", "Tea", "Soda", "Juice"]
+    }
+  ]
+}
+  
