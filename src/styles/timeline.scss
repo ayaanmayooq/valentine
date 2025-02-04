@@ -1,0 +1,160 @@
+// styles/timeline.scss
+
+@import url('https://fonts.googleapis.com/css?family=Cardo|Pathway+Gothic+One');
+
+// Example variables, mixins, etc.
+$content-font: 'Cardo', serif;
+$heading-font: 'Pathway Gothic One', sans-serif;
+
+.timeline-container {
+  position: relative;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+
+  &:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(99, 99, 99, 0.8);
+    pointer-events: none; // so content is still clickable
+  }
+}
+
+// .timeline-header, .timeline-item, etc.
+.timeline-header {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 1;
+
+  &__title {
+    color: #fff;
+    font-size: 46px;
+    font-family: $content-font;
+    margin: 0;
+  }
+
+  &__subtitle {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: $heading-font;
+    font-size: 16px;
+    letter-spacing: 5px;
+    margin-top: 10px;
+    font-weight: normal;
+  }
+}
+
+.timeline {
+  position: relative;
+  max-width: 700px; /* or your old $timeline-width */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.07);
+    transform: translateX(-50%);
+  }
+}
+
+.timeline-item {
+  width: calc(50% - 40px);
+  box-sizing: border-box;
+  padding: 40px 0;
+  filter: blur(2px);
+  opacity: 0.3;
+  transform: translateY(-80px);
+  transition: 0.5s;
+  position: relative;
+
+  // Left or right alignment for even/odd items
+  &:nth-child(even) {
+    align-self: flex-end;
+  }
+  
+  &:before {
+    content: attr(data-text);
+    position: absolute;
+    font-size: 13px;
+    color: rgba(#fff, 0.5);
+    top: 70%;
+    transform: translateY(-50%);
+    letter-spacing: 3px;
+    font-family: $heading-font;
+    border-left: 2px solid rgba(#fff, 0.5);
+    padding-left: 15px;
+    opacity: 0;
+    right: calc(-100% - 56px);
+    transition: 0.3s all 0.2s;
+  }
+
+  // Active state
+  &--active {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+
+    &:before {
+      top: 50%;
+      opacity: 1;
+    }
+
+    // e.g. add extra margin shift for the year
+    .timeline__content-title {
+      margin: -50px 0 20px 0;
+    }
+  }
+
+  // Mobile responsiveness
+  @media (max-width: 767px) {
+    width: 100%;
+    padding: 0 30px 150px 80px;
+    &:before {
+      left: 10px !important;
+      top: 50px;
+      width: 60px;
+      border: none !important;
+      padding: 0 !important;
+    }
+    &:last-child {
+      padding-bottom: 40px;
+    }
+  }
+}
+
+.timeline__content {
+  position: relative;
+  z-index: 1;
+
+  &-title {
+    font-weight: normal;
+    font-size: 66px;
+    font-family: $heading-font;
+    color: #fff;
+    margin: -10px 0 0;
+    transition: 0.4s;
+    padding: 0 10px;
+  }
+  
+  &-desc {
+    margin: 0;
+    font-size: 15px;
+    font-family: $content-font;
+    color: rgba(#fff, 0.7);
+    line-height: 25px;
+    padding: 0 10px;
+  }
+}
+
+.timeline__img {
+  max-width: 100%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+}

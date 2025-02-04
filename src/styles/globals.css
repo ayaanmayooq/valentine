@@ -1,0 +1,38 @@
+/* Add custom styles */
+.perspective {
+  perspective: 1000px;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.transition-transform {
+  transition: transform 0.7s ease;
+}
+
+#timeline {
+  transition: background-image 0.5s ease-in-out;
+}
+
+.timeline-item {
+  transition: all 0.5s ease-in-out;
+}
+
+.timeline-item.active {
+  opacity: 1;
+  filter: blur(0);
+}
+
+.timeline-item.active .timeline-content {
+  transform: translateY(0);
+}
+
+.timeline-content {
+  transform: translateY(50px);
+  transition: transform 0.5s ease-in-out;
+}

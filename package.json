@@ -11,7 +11,8 @@
   "dependencies": {
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
-    "framer-motion": "^12.0.6",
+    "framer-motion": "^12.0.11",
+    "jquery": "^3.7.1",
     "next": "15.1.6",
     "node-fetch": "^3.3.2",
     "react": "^19.0.0",
@@ -19,10 +20,12 @@
     "react-grid-layout": "^1.5.0",
     "react-resizable": "^3.0.5",
     "request": "^2.88.2",
+    "sass": "^1.83.4",
     "spotify-web-api-js": "^1.5.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@types/jquery": "^3.5.32",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
