@@ -43,11 +43,11 @@ export default function Dashboard() {
         cols={10} // More granular grid system
         rowHeight={gridHeight / 10} // Adjust row height dynamically
         width={gridWidth} // Keep layout within screen size
-        isResizable
-        isDraggable
-        resizeHandles={["s", "e", "w", "n", "se", "sw", "ne", "nw"]} // Allow resizing from all sides
+        isResizable={false}
+        isDraggable={false}
+        // resizeHandles={["s", "e", "w", "n", "se", "sw", "ne", "nw"]} // Allow resizing from all sides
         compactType={null} // Prevent overlapping by letting items adjust
-        autoSize // Automatically resize other boxes
+        autoSize={false} // Automatically resize other boxes
         preventCollision={true} // Prevent components from moving under each other
         maxRows={9} // Limit rows to fit within screen
       >

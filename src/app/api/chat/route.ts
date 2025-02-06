@@ -1,29 +1,38 @@
-// src/app/api/chat/route.ts
-
 import OpenAI from "openai";
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 
-// Initialize OpenAI client with your API key
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
 export async function POST(req: NextRequest) {
-  const { messages } = await req.json();
-
   try {
-    // Call OpenAI API for chat completion
-    const response = await openai.chat.completions.create({
-      model: "gpt-3.5-turbo", // Use the appropriate model version
-      messages: messages,
+    const { messages } = await req.json();
+
+    const stream = await openai.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages,
+      stream: true,
     });
 
-    // Return the assistant's response
-    return NextResponse.json({
-      content: response.choices[0].message.content,
+    const encoder = new TextEncoder();
+    const streamResponse = new ReadableStream({
+      async start(controller) {
+        for await (const chunk of stream) {
+          const text = chunk.choices[0]?.delta?.content || "";
+          controller.enqueue(encoder.encode(text));
+        }
+        controller.close();
+      },
+    });
+
+    return new Response(streamResponse, {
+      headers: {
+        "Content-Type": "text/plain",
+      },
     });
   } catch (error) {
     console.error("Error with OpenAI:", error);
-    return NextResponse.json({ content: "Sorry, something went wrong." });
+    return new Response("Sorry, something went wrong.", { status: 500 });
   }
 }
