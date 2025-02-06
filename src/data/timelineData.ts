@@ -2,6 +2,7 @@ export interface TimelineEvent {
     date: string;
     img: string;
     desc: string;
+    sideHeading?: string;
   }
   
   export const TIMELINE_DATA: TimelineEvent[] = [
@@ -11,6 +12,7 @@ export interface TimelineEvent {
       desc: `He was born in 1881 (probably in the spring) in Salonica, then an Ottoman city, now in Greece. 
              His father Ali Riza, a customs official turned lumber merchant, died when Mustafa was still a boy. 
              His mother Zubeyde, a devout and strong-willed woman, raised him and his sister.`,
+      sideHeading: "MAMAMIA",
     },
     {
       date: "1893",
@@ -18,27 +20,28 @@ export interface TimelineEvent {
       desc: `First enrolled in a traditional religious school, he soon switched to a modern school. 
              In 1893, he entered a military high school where his mathematics teacher gave him the second name Kemal (meaning perfection) 
              in recognition of young Mustafa's superior achievement.`,
+      sideHeading: "MAMAMIA",
     },
     {
       date: "1915",
       img: "http://ataturk.istanbul.gov.tr/GalleryLibrary/12.jpg",
       desc: `In 1915, when the Dardanelles campaign was launched, Colonel Mustafa Kemal became a national hero 
              by winning successive victories and finally repelling the invaders.`,
+      sideHeading: "MAMAMIA",
     },
     {
       date: "1920",
       img: "timeline-images/test.jpeg",
       desc: `On April 23, 1920, the Grawith the rank of Marshal.`,
+      sideHeading: "MAMAMIA",
     },
     {
       date: "1934",
       img: "https://pbs.twimg.com/media/Cw69H8pXUAEaSqa.jpg",
-      desc: `The account of Atatürk's fifteen-year Presidency is a saga of dramatic modernization. 
-             With indefatigable determination, he created a new political and legal system, 
-             abolished the Caliphate and made both government and education secular, gave equal rights to women, 
-             changed the alphabet and the attire, and advanced the arts and sciences, agriculture, and industry.
+      desc: `The account of Atatürk's fifteen-year Presidency is a saga of nd re, and industry.
              In 1934, when the surname law was adopted, the national parliament gave him the name 
              "Atatürk" (Father of the Turks).`,
+      sideHeading: "MAMAMIA",
     },
     {
       date: "1938",
@@ -46,5 +49,6 @@ export interface TimelineEvent {
       desc: `On November 10, 1938, following an illness of a few months, 
              the national liberator and the Father of modern Turkey died. 
              But his legacy to his people and to the world endures.`,
+      sideHeading: "MAMAMIA",
     },
   ];
