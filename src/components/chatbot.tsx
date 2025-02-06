@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import ReactMarkdown from "react-markdown";
 
 export function DateIdeasChatbot() {
   const [messages, setMessages] = useState<{ role: string; content: string }[]>([
@@ -55,19 +56,19 @@ export function DateIdeasChatbot() {
       <div className="flex-grow p-4 overflow-auto bg-spotify-bottom rounded-lg shadow-md">
         {messages.slice(1).map((message, index) => (
           <div key={index} className={`mb-2 ${message.role === "user" ? "text-right" : "text-left"}`}>
-            <p className={`inline-block px-4 py-2 rounded-lg ${message.role === "user" ? "bg-valentine-rose text-white" : "bg-gray-200 text-black"}`}>
-              {message.content}
-            </p>
+            <div className={`inline-block px-4 py-2 rounded-lg ${message.role === "user" ? "bg-valentine-rose text-white" : "bg-gray-200 text-black"}`}>
+              <ReactMarkdown components={{ p: "span" }}>{message.content}</ReactMarkdown> 
+            </div>
           </div>
         ))}
-        {loading && <p className="text-gray-500">Thinking...</p>}
+        {loading && <p className="text-gray-500">...</p>}
       </div>
 
       {/* User Input */}
       <div className="mt-2 flex gap-2 justify-center">
         <input
           type="text"
-          className="p-2 border rounded-lg w-full"
+          className="p-2 border rounded-lg w-full text-black"
           placeholder="Enter your date idea preference..."
           value={input}
           onChange={(e) => setInput(e.target.value)}

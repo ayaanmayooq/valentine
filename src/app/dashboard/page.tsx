@@ -71,7 +71,7 @@ export default function Dashboard() {
         <div key="date-ideas" className="">
           <Card
             title="💡 Date Ideas"
-            content={<></>}
+            content={<DateIdeasChatbot />}
             variant="darker"
           />
         </div>
