@@ -60,7 +60,7 @@ export default function Dashboard() {
           />
         </div>
 
-        <div key="memory-list" className="h-full w-full rounded-xl overflow-y-auto">
+        <div key="memory-list" className="h-full w-full rounded-xl bg-black">
           <MemoryTimeline />
         </div>
 
@@ -71,7 +71,7 @@ export default function Dashboard() {
         <div key="date-ideas" className="">
           <Card
             title="💡 Date Ideas"
-            content={<></>}
+            content={<DateIdeasChatbot/>}
             variant="darker"
           />
         </div>

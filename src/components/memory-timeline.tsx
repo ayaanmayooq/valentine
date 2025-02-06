@@ -43,15 +43,20 @@ export default function MemoryTimeline() {
   const currentBg = TIMELINE_DATA[activeIndex]?.img;
 
   return (
-    <div className="w-full h-full relative">
-    <div
-      id="timeline-1"
-      className="timeline-container w-full h-full absolute bg-cover bg-center inset-0"
-      style={{
+    <>
+    <div className="fixed w-full h-full inset-0"
+    style={{
+        backgroundColor: "rgba(46, 4, 13, 0.5)",
+    }}
+    ></div>
+    <div className="timeline-contianer w-full h-full overflow-auto inset-0"
+    style={{
         backgroundImage: `url(${currentBg})`,
-      }}
+        backgroundAttachment: "fixed",
+        backgroundSize: "cover",
+        }}
     >
-      {/* Dark overlay is done in SCSS .timeline-container:before */}
+    {/* <div className=" w-full h-full" */}
       <div className="timeline-header p-8">
         <h2 className="timeline-header__title">Memories</h2>
         <h3 className="timeline-header__subtitle">you & me</h3>
@@ -67,7 +72,7 @@ export default function MemoryTimeline() {
                 if (el) itemRefs.current[i] = el;
               }}
               className={`timeline-item ${isActive ? "timeline-item--active" : ""}`}
-              data-text="FATHER OF THE TURKS" // for side heading
+              data-text={item.sideHeading} // for side heading
             >
               <div className="timeline__content">
                 <img className="timeline__img" src={item.img} alt={item.date} />
@@ -79,6 +84,6 @@ export default function MemoryTimeline() {
         })}
       </div>
     </div>
-    </div>
+    </>
   );
 }
