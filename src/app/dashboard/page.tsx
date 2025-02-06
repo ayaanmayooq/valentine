@@ -43,11 +43,11 @@ export default function Dashboard() {
         cols={10} // More granular grid system
         rowHeight={gridHeight / 10} // Adjust row height dynamically
         width={gridWidth} // Keep layout within screen size
-        isResizable
-        isDraggable
-        resizeHandles={["s", "e", "w", "n", "se", "sw", "ne", "nw"]} // Allow resizing from all sides
+        isResizable={false} // Prevent resizing
+        isDraggable={false} // Prevent dragging
+        // resizeHandles={["s", "e", "w", "n", "se", "sw", "ne", "nw"]} // Allow resizing from all sides
         compactType={null} // Prevent overlapping by letting items adjust
-        autoSize // Automatically resize other boxes
+        autoSize={false} // Automatically resize other boxes
         preventCollision={true} // Prevent components from moving under each other
         maxRows={9} // Limit rows to fit within screen
       >
@@ -55,21 +55,11 @@ export default function Dashboard() {
         <Card
             title="📅 Planned Date"
             content={<PlannedDate />}
-            variant="darker" // Use romantic styling
+            variant="darker"
           />
         </div>
 
-        <div key="memory-list" className="h-full w-full rounded-xl overflow-auto">
-        {/* <Card
-            title="📸 Memory Timeline"
-            variant="darker"
-            // We'll pass the timeline as content
-            content={
-              <div className="z-10 h-full w-full">
-                <MemoryTimeline />
-              </div>
-            }
-          /> */}
+        <div key="memory-list" className="h-full w-full rounded-xl overflow-y-auto">
           <MemoryTimeline />
         </div>
 
@@ -81,7 +71,7 @@ export default function Dashboard() {
           <Card
             title="💡 Date Ideas"
             content={<></>}
-            variant="darker" // Use romantic styling
+            variant="darker"
           />
         </div>
       </GridLayout>
