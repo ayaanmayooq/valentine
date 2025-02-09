@@ -31,13 +31,13 @@ export default function Dashboard() {
 
   const layout = [
     { i: "planned-date", x: 5, y: 0, w: 2, h: 5, minW: 2, minH: 2, maxW: 10, maxH: 10 },
-    { i: "memory-list", x: 0, y: 0, w: 5, h: 9, minW: 2, minH: 2, maxW: 10, maxH: 10 },
+    { i: "memory-list", x: 0, y: 0, w: 5, h: 10, minW: 2, minH: 2, maxW: 10, maxH: 10 },
     { i: "playlist", x: 7, y: 0, w: 3, h: 5, minW: 2, minH: 5, maxW: 10, maxH: 10 },
-    { i: "date-ideas", x: 5, y: 5, w: 5, h: 4, minW: 2, minH: 2, maxW: 10, maxH: 10 },
+    { i: "date-ideas", x: 5, y: 5, w: 5, h: 5, minW: 2, minH: 2, maxW: 10, maxH: 10 },
   ];
 
   return (
-    <div className="min-h-screen bg-valentine-pink p-6 overflow-hidden">
+    <div className="min-h-screen bg-valentine-pink overflow-hidden">
       <GridLayout
         className="layout"
         layout={layout}

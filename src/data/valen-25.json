@@ -3,40 +3,75 @@
   "date": "2025-02-14",
   "questions": [
     {
-      "title": "Question 1",
-      "text": "What is your favorite activity for a date?",
+      "title": "Morning Workout",
+      "text": "How are we starting the morning?",
       "options": [
-        "Dinner at a romantic restaurant",
-        "A walk in the park",
-        "Watching a movie together",
-        "Cooking at home"
+        "🏋️‍♂️ Quick gym session – nothing crazy, just a solid start",
+        "🧘‍♀️ Yoga – stretch, breathe, and pretend we’re zen",
+        "🚶‍♂️ Chill outdoor walk – morning air & good company",
+        "🍳 Skip to brunch – the only lifting I’m doing is my fork"
       ]
     },
     {
-      "title": "Question 2",
-      "text": "What kind of food do you prefer?",
-      "options": ["Italian", "Indian", "Mexican", "Chinese"]
+      "title": "Brunch Spot",
+      "text": "Where’s brunch happening?",
+      "options": [
+        "🏡 DIY Brunch – Mushrooms, avocado toast, matcha, maybe even mimosas?",
+        "☕ Bouldin Creek – Austin’s veggie brunch classic",
+        "🌿 Corinne – upscale but chill, brunch done right",
+        "🍽️ Caroline – rooftop vibes & all-day brunch"
+      ]
     },
     {
-      "title": "Question 3",
-      "text": "Which is your preferred type of music?",
-      "options": ["Pop", "Rock", "Jazz", "Classical"]
+      "title": "Paint & Chill",
+      "text": "We’re doing the Memory Jar, but how should we set the mood?",
+      "options": [
+        "🍷 Paint & Sip – some Roscato, some paint, a masterpiece (maybe)",
+        "🎨 Free-paint – let’s just see where it goes",
+        "🖼️ Paint-by-numbers – zero effort required, just vibes",
+        "😌 Just chill – put on music & do nothing for a bit"
+      ]
     },
     {
-      "title": "Question 4",
-      "text": "What kind of movies do you enjoy?",
-      "options": ["Comedy", "Action", "Drama", "Horror"]
+      "title": "Movie Choice",
+      "text": "Pick the movie, but let’s be real, I already know what you’ll choose",
+      "options": [
+        "🦸‍♂️ Captain America – obviously",
+        "😂 You, me & her – something light & funny",
+        "🎭 Sleepless in Seattle – emotional damage? Sure",
+        "😱 Rounding – let’s make it interesting"
+      ]
     },
     {
-      "title": "Question 5",
-      "text": "Which type of vacation do you prefer?",
-      "options": ["Beach", "Mountains", "City", "Countryside"]
+      "title": "Cocktail Time 🍸",
+      "text": "Back home for cocktails – what are we making?",
+      "options": [
+        "🍷 Roscato – sweet & easy, perfect for a cozy night",
+        "🥂 Classic Champagne – smooth, bubbly, and elegant",
+        "🍍 Mango Margarita – fruity, tangy, and fun",
+        "🍓 Strawberry Rosé Spritz – light, fresh, and sweet",
+        "🍫 Chocolate Martini – rich, creamy, and indulgent"
+      ]
     },
     {
-      "title": "Question 6",
-      "text": "What is your favorite drink?",
-      "options": ["Coffee", "Tea", "Soda", "Juice"]
+      "title": "Dinner Spot",
+      "text": "Where’s our Valentine’s dinner?",
+      "options": [
+        "✨ Corinne – Classy but chill, great food & cocktails",
+        "🍣 Ebisu Sushi – Cozy sushi spot with fresh sashimi & rolls",
+        "🌮 Ma'Coco – Mexican flavors in a cozy, intimate setting",
+        "🥙 Ezov – Mediterranean, warm lighting, and amazing food"
+      ]
+    },
+    {
+      "title": "Late Night Plan 🌌",
+      "text": "Stargazing & snacks – what’s the move?",
+      "options": [
+        "🌌 Pennybacker Bridge – best views & fresh air",
+        "🍪 Dessert night – cake, cookies, and sweet stuff",
+        "🌶️ Indian chaat – spicy, tangy, and perfect for the night",
+        "🎶 Music & chill – just us, good vibes, and snacks"
+      ]
     }
   ]
 }
-  
