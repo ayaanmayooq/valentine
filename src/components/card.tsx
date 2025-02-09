@@ -4,7 +4,7 @@ interface CardProps {
   title: string;
   subtitle?: string;
   content: React.ReactNode;
-  variant?: "romantic" | "elegant" | "whimsical";
+  variant?: "romantic" | "elegant" | "whimsical" | "darker";
 }
 
 const variantStyles = {
