@@ -8,25 +8,25 @@ export interface TimelineEvent {
 export const TIMELINE_DATA: TimelineEvent[] = [
   {
       date: "Moments",
-      img: "timeline-images/26.jpg",
+      img: "timeline-images/26.JPG",
       desc: "worth reliving. Days like these are the ones we hold onto forever. Keep scrolling, you'll have fun.",
       sideHeading: "Golden Days",
   },
   {
       date: "2025-02-06",
-      img: "timeline-images/25.jpg",
+      img: "timeline-images/25.JPG",
       desc: "We ate wayyy too much. AYCE sushi, egg curry, and a whole bottle of wine.",
       sideHeading: "Foodies",
   },
   {
       date: "2024-11-21",
-      img: "timeline-images/24.jpg",
+      img: "timeline-images/24.JPG",
       desc: "Body goals and relationship goals. All-in-one. Better not be weak and lazt when we're 50.",
       sideHeading: "Power Couple",
   },
   {
       date: "2024-11-18",
-      img: "timeline-images/23.jpg",
+      img: "timeline-images/23.JPG",
       desc: "That olive garden dinner really hit the spot. I'm still full. Let's never talk about what happened before that.",
       sideHeading: "Understanding",
   },
@@ -86,7 +86,7 @@ export const TIMELINE_DATA: TimelineEvent[] = [
   },
   {
       date: "2022-10-10",
-      img: "timeline-images/17.jpg",
+      img: "timeline-images/17.JPG",
       desc: "No words needed. Just two sloths in their natural habitat.",
       sideHeading: "Goofy",
   },
@@ -128,7 +128,7 @@ export const TIMELINE_DATA: TimelineEvent[] = [
   },
   {
       date: "2022-02-26",
-      img: "timeline-images/8.jpg",
+      img: "timeline-images/8.JPG",
       desc: "It was a really fun day. Clearly you were so excited your hair started to dance.",
       sideHeading: "Valentine's",
   },
@@ -140,7 +140,7 @@ export const TIMELINE_DATA: TimelineEvent[] = [
   },
   {
       date: "2022-01-23",
-      img: "timeline-images/7.jpg",
+      img: "timeline-images/7.JPG",
       desc: "A cuddle addict just following her instincts.",
       sideHeading: "Cuddles",
   },
@@ -158,13 +158,13 @@ export const TIMELINE_DATA: TimelineEvent[] = [
   },
   {
     date: "2021-10-21",
-    img: "timeline-images/3.jpg",
+    img: "timeline-images/3.JPG",
     desc: "Just another day you admiring how handsome I look.",
     sideHeading: "Goofy",
   },
   {
       date: "2021-09-13",
-      img: "timeline-images/5.jpg",
+      img: "timeline-images/5.JPG",
       desc: "Your visits when my leg was broken really cheered me up. I never told you how much I appreciated it.",
       sideHeading: "Small Things",
   },
