@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import { Question } from "@/components/question";
 import { SurveySummary } from "@/components/survey-summary";
 
