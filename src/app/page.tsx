@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 
-export default function Home(): JSX.Element {
+export default function Home() {
   const [showQuestion, setShowQuestion] = useState<boolean>(false);
   const [escaped, setEscaped] = useState<boolean>(false);
   const [noButtonPos, setNoButtonPos] = useState<{ top: number; left: number }>({ top: 0, left: 0 });
