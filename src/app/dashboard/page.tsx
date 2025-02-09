@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import GridLayout from "react-grid-layout";
-import { Placeholder } from "@/components/placeholder";
+// import { Placeholder } from "@/components/placeholder";
 
 import {PlannedDate} from "@/components/planned-date";
 import {DateIdeasChatbot} from "@/components/chatbot";

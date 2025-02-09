@@ -11,10 +11,10 @@ interface SurveySummaryProps {
   date: string;
 }
 
-interface SurveyResponses {
-    answers: string[];
-    date: string;
-  }
+// interface SurveyResponses {
+//     answers: string[];
+//     date: string;
+//   }
 
 export function SurveySummary({ questions, selectedOptions, title, date }: SurveySummaryProps) {
     const router = useRouter();

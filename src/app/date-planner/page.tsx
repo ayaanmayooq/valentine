@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { Switch } from "@headlessui/react";
+// import { useState } from "react";
+// import { Switch } from "@headlessui/react";
 import { Survey } from "@/components/survey";
 
 import dateData from "@/data/valen-25.json";

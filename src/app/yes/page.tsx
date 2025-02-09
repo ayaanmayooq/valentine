@@ -16,7 +16,7 @@ export default function YesPage(): JSX.Element {
             Perfect! I knew you would say YES!
             </h1>
             <p className="text-xl text-white mb-8">
-            Get ready for an unforgettable day — let's start planning our perfect date.
+            Get ready for an unforgettable day — lets start planning our perfect date.
             </p>
             <Button
             label="Start Planning"

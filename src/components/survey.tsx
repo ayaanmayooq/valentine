@@ -23,7 +23,7 @@ export function Survey({ title, date, questions }: SurveyProps) {
   const [selectedOptions, setSelectedOptions] = useState<(number | undefined)[]>([]);
   const [surveyComplete, setSurveyComplete] = useState(false);
 
-  const router = useRouter();
+  // const router = useRouter();
 
   const handleSelect = (index: number) => {
     const newSelections = [...selectedOptions];

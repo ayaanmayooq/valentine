@@ -36,8 +36,8 @@ export default function Home(): JSX.Element {
         setEscaped(true);
       }
       // Use approximate dimensions for the button (adjust if needed)
-      const approxButtonWidth = 120;
-      const approxButtonHeight = 40;
+      // const approxButtonWidth = 120;
+      // const approxButtonHeight = 40;
       // Calculate new random positions ensuring the button stays fully in view
       const newTop = Math.random() * (window.innerHeight - 50);
       const newLeft = Math.random() * (window.innerWidth - 100);
