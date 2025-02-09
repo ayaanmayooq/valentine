@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/button";
 
-export default function YesPage(): JSX.Element {
+export default function YesPage() {
     const router = useRouter();
 
     const handleDatePlanner = () => {
