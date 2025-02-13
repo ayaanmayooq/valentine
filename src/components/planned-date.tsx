@@ -21,23 +21,23 @@ export function PlannedDate() {
   return (
     <div className="h-full w-full p-4 overflow-auto">
       {plannedDate ? (
-        <div className="text-center">
+        <div className="text-left">
           {/* Title */}
           <h2 className="text-2xl font-bold text-valentine-rose mb-4">
             {plannedDate.title}
           </h2>
 
           {/* Answers */}
-          <ul className="text-left list-inside list-disc mb-4">
+          <ul className="text-left mb-4">
             {plannedDate.answers.map((answer, index) => (
-              <li key={index} className="mb-1">
+              <li key={index} className="p-1 rounded-md">
                 {answer}
               </li>
             ))}
           </ul>
 
           {/* Date */}
-          <p className="text-sm">
+          <p className="text-center">
             Excited for{" "}
             <span className="font-medium">
               {plannedDate.date}

@@ -54,7 +54,7 @@ export default function Dashboard() {
       >
         <div key="planned-date">
         <Card
-            title="📅 Planned Date"
+            title="PLANNED DATE"
             content={<PlannedDate />}
             variant="darker"
           />
@@ -65,12 +65,12 @@ export default function Dashboard() {
         </div>
 
         <div key="playlist" className="overflow-hidden">
-          <SpotifyPlaylist playlistId="0Sg92j0J1dIwcTuwCIE46Y" />
+          <SpotifyPlaylist playlistId="7dm7JGCV8yhOEOxx5l0l9e" />
         </div>
 
         <div key="date-ideas" className="">
           <Card
-            title="💡 Date Ideas"
+            title="DATE IDEAS ASSISTANT"
             content={<DateIdeasChatbot/>}
             variant="darker"
           />

@@ -23,8 +23,8 @@ export default {
         "valentine-cream": "#fdf3e7", // Cream for a soft neutral background
         "valentine-gray": "#e0d7df",  // Muted gray for subtle borders
         "valentine-mauve": "#e0b0ff", // Pale mauve for gentle transitions
-        "spotify-top": "#72474f",   // Mauve for the top section
-        "spotify-bottom": "#60363f", // Darker mauve for the bottom section
+        "spotify-top": "#952444",   // Mauve for the top section
+        "spotify-bottom": "#7a1231", // Darker mauve for the bottom section
       },
     },
   },

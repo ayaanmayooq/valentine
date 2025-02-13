@@ -46,7 +46,7 @@ export default function MemoryTimeline() {
     <>
     <div className="fixed w-full h-full inset-0 rounded-lg"
     style={{
-        backgroundColor: "rgba(46, 4, 13, 0.8)",
+        backgroundColor: "rgba(122,18,49,0.8)",
     }}
     ></div>
     <div className="timeline-contianer w-full h-full overflow-auto inset-0"
